@@ -1,0 +1,31 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
+/* @var $this yii\web\View */
+/* @var $model app\models\Persona */
+/* @var $form ActiveForm */
+?>
+<h3>Datos del Aspirante</h3>
+<fieldset><legend></legend>
+<div class="persona-aspirante">
+
+    <?php $form = ActiveForm::begin(); ?>
+
+        <?= $form->field($model, 'cedula') ?>
+        <?= $form->field($model, 'apellidos') ?>
+        <?= $form->field($model, 'nombres') ?>
+        <?= $form->field($model, 'fecha_nacimiento') ?>
+        <?= $form->field($model, 'edad') ?>
+        <?= $form->field($model, 'direccion') ?>
+        <?= $form->field($model, 'telefono') ?>
+        <?= $form->field($model, 'sexo') ?>
+        <?= $form->field($model, 'tipo') ?>
+    </fieldset>
+        <div class="form-group">
+            <?= Html::submitButton(Yii::t('app', 'Submit'), ['class' => 'btn btn-primary']) ?>
+        </div>
+    <?php ActiveForm::end(); ?>
+
+</div><!-- persona-aspirante -->
